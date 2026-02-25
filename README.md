@@ -28,21 +28,17 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 ## Installation
 
 1. Install **AutoHotkey v2**
-2. Download the correct **VirtualDesktopAccessor.dll** for your Windows build
-3. Place **both** `MoveWindowVDesk.ahk` and `VirtualDesktopAccessor.dll` in the **same folder**
-4. Double-click the `.ahk` script - you should see an AHK icon appear in the tray, indicating the script is running.
-
-
+2. Download **MoveWindowVDesk.ahk** from this repository
+3. Download the correct **VirtualDesktopAccessor.dll** for your Windows build
+4. Place **both** `MoveWindowVDesk.ahk` and `VirtualDesktopAccessor.dll` in the **same folder**
+5. Double-click the `MoveWindowVDesk.ahk` script - you should see an AHK icon appear in the tray, indicating the script is running.
 6. To have the **script launch automatically on Windows start**, press `Win + R`, paste the following search querry and press Enter:
    ```
    %AppData%\Microsoft\Windows\Start Menu\Programs\Startup
    ```
-6. In the Autostart folder right-click an empty spot → **New → Shortcut**
-7. Paste the full path to the script, (this is an example, replace it with your real path):
-   ```
-   C:\path\to\your\MoveWindowVDesk.ahk
-   ```
-8. Click **Finish** — the script will now start with Windows
+7. In the Autostart folder right-click an empty spot `→ New → Shortcut`
+8. Paste the full path to the script. **Tip**: hold `Shift` while `right-clicking` the `MoveWindowVDesk.ahk` script `→ Copy as path`
+9. Click **Finish** — the script will now start with Windows
 
 
 
