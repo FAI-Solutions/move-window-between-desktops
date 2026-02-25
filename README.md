@@ -13,7 +13,7 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 | `Ctrl + Shift + Win + →` | Move active window **right** to the next desktop     |
 | `Ctrl + Shift + Win + ←` | Move active window **left**  to the previous desktop |
 
----
+
 
 ## Requirements
 
@@ -23,7 +23,7 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 
 > **Tip**: To find your Windows build: *Settings → System → About* → look for "*OS build*"
 
----
+
 
 ## Installation
 
@@ -44,7 +44,7 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
    ```
 8. Click **Finish** — the script will now start with Windows
 
----
+
 
 ## Troubleshooting
 
@@ -61,7 +61,7 @@ If the script stop working after a major Windows update:
 
 [MIT](LICENSE)
 
----
+
 
 ## Credits & Thanks
 
