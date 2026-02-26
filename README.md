@@ -18,7 +18,7 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 ## Requirements
 
 - Windows 10 or 11
-- [AutoHotkey v2.0](https://www.autohotkey.com/download/ahk-v2.exe)
+- [AutoHotkey v2.0](https://www.autohotkey.com/)
 - [VirtualDesktopAccessor.dll](https://github.com/Ciantic/VirtualDesktopAccessor/releases) — pick the version matching your Windows build
 
 > **Tip**: To find your Windows build: *Settings → System → About* → look for "*OS build*"
