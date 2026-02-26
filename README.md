@@ -49,7 +49,7 @@ If the script stop working after a major Windows update:
 1. Check if AHK icon still appears in the tray (the `.ahk` file might be blocked by Windows Defender)
 2. Check for a newer **VirtualDesktopAccessor.dll** at the [releases page](https://github.com/Ciantic/VirtualDesktopAccessor/releases) — Windows updates can break the DLL
 3. Check this repository for an updated script version
-4. [Open an issue](/issues) and describe your problem (include your Windows build number)
+4. [Open an issue](/FAI_Solutions/MoveWindowVDesk/issues) and describe your problem (include your Windows build number)
 
 ---
 
