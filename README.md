@@ -28,8 +28,8 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 ## Installation
 
 1. Download and install [AutoHotkey v2.0](https://www.autohotkey.com/download/ahk-v2.exe)
-2. Download [MoveWindowVDesk.ahk](https://codeberg.org/FAI_Solutions/MoveWindowVDesk/releases) 
-3. Download the correct [VirtualDesktopAccessor.dll](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build
+2. Download [MoveWindowVDesk.ahk](https://codeberg.org/FAI_Solutions/MoveWindowVDesk/releases/latest) 
+3. Download the correct [VirtualDesktopAccessor.dll](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build (see requirements)
 4. Place **both** `MoveWindowVDesk.ahk` and `VirtualDesktopAccessor.dll` in the **same folder**
 5. Double-click the `MoveWindowVDesk.ahk` script - you should see an AHK icon appear in the tray, indicating the script is running.
 6. To have the **script launch automatically on Windows start**, press `Win + R`, paste the following search querry and press Enter:
