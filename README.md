@@ -1,6 +1,6 @@
-# MoveWindowVDesk
+# move-window-between-desktops
 
-Move your active window to the next or previous virtual desktop on **Windows 10/11** — with a single keyboard shortcut. A feature Microsoft should have built in ages ago.
+Move your active window to the next or previous virtual desktop on **Windows 10 / 11** with a single keyboard shortcut - a feature Microsoft should have included long ago.
 
 Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor).
 
@@ -28,10 +28,10 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 ## Installation
 
 1. Download and install [AutoHotkey v2.0](https://www.autohotkey.com/download/ahk-v2.exe)
-2. Download [MoveWindowVDesk.ahk](https://codeberg.org/FAI_Solutions/MoveWindowVDesk/releases/latest) 
+2. Download [move-window-between-desktops.ahk](https://codeberg.org/FAI_Solutions/MoveWindowVDesk/releases/latest) 
 3. Download the correct [VirtualDesktopAccessor.dll](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build (see requirements)
-4. Place **both** `MoveWindowVDesk.ahk` and `VirtualDesktopAccessor.dll` in the **same folder**
-5. Double-click the `MoveWindowVDesk.ahk` script - you should see an AHK icon appear in the tray, indicating the script is running.
+4. Place **both** `move-window-between-desktops.ahk` and `VirtualDesktopAccessor.dll` in the **same folder**
+5. Double-click the `move-window-between-desktops.ahk` script - you should see an AHK icon appear in the tray, indicating the script is running.
 6. To have the **script launch automatically on Windows start**, press `Win + R`, paste the following search querry and press Enter:
    ```
    %AppData%\Microsoft\Windows\Start Menu\Programs\Startup
@@ -48,7 +48,7 @@ If the script stop working after a major Windows update:
 
 1. Check if AHK icon still appears in the tray (the `.ahk` file might be blocked by Windows Defender)
 2. Check for a newer **VirtualDesktopAccessor.dll** at the [releases page](https://github.com/Ciantic/VirtualDesktopAccessor/releases) — Windows updates can break the DLL
-3. Check this repository for an updated script version
+3. Check this repository for an updated version
 4. [Open an issue](/FAI_Solutions/MoveWindowVDesk/issues) and describe your problem (include your Windows build number)
 
 ---
@@ -59,6 +59,14 @@ If the script stop working after a major Windows update:
 
 
 
-## Credits & Thanks
+## Contact
+
+[Johannes Faber](https://codeberg.org/FAI_Solutions) - fais.udder466@passinbox.com
+
+
+
+## Acknowledments
 
 - [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor) by Jari Pennanen (MIT License)
+
+
