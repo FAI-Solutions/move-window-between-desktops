@@ -44,7 +44,7 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 
 ## Troubleshooting
 
-If the script stop working after a major Windows update:
+If the script stops working after a major Windows update:
 
 1. Check if AHK icon still appears in the tray (the `.ahk` file might be blocked by Windows Defender)
 2. Check for a newer **VirtualDesktopAccessor.dll** at the [releases page](https://github.com/Ciantic/VirtualDesktopAccessor/releases) — Windows updates can break the DLL
@@ -63,9 +63,7 @@ If the script stop working after a major Windows update:
 
 Developers:
 
-- [Johannes Faber](https://codeberg.org/FAI_Solutions) &nbsp; — &nbsp; fais.udder466@passinbox.com
-
-Contributors:
+- [Johannes Faber](https://codeberg.org/FAI_Solutions) &nbsp; — &nbsp; [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
 
 
 
