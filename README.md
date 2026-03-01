@@ -61,7 +61,11 @@ If the script stop working after a major Windows update:
 
 ## Contact
 
-[Johannes Faber](https://codeberg.org/FAI_Solutions) &nbsp; — &nbsp; fais.udder466@passinbox.com
+Developers:
+
+- [Johannes Faber](https://codeberg.org/FAI_Solutions) &nbsp; — &nbsp; fais.udder466@passinbox.com
+
+Contributors:
 
 
 
