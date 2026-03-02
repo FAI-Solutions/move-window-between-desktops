@@ -29,10 +29,16 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 
 **latest version**:
 1. Download and install [AutoHotkey v2.0](https://www.autohotkey.com/download/ahk-v2.exe)
-2. Download [move-window-between-desktops.ahk](https://codeberg.org/FAI_Solutions/move-window-between-desktops/releases/latest) 
+2. Download both [move-window-between-desktops.ahk & setup-autostart.ahk](https://codeberg.org/FAI_Solutions/move-window-between-desktops/releases/latest)
 3. Download the correct [VirtualDesktopAccessor.dll](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build (see requirements)
-4. Place **both** `move-window-between-desktops.ahk` and `VirtualDesktopAccessor.dll` in the **same folder**
-5. Double-click the `setup-autostart.ahk` script (it will ask for elevated privilege) and automatically configure a scheduled task so that with every Windows start the `move-window-between-desktops.ahk` will be loaded. Furthermore it will offer to start `move-window-between-desktops.ahk`, after it is started an AHK icon will appear in the tray.
+4. Place **all three** `move-window-between-desktops.ahk`, `setup-autostart.ahk` and `VirtualDesktopAccessor.dll` in the **same folder**, so that your folder structure looks like that:
+```
+   📁 MoveWindowBetweenDesktops/
+   ├── move-window-between-desktops.ahk
+   ├── setup-autostart.ahk
+   └── VirtualDesktopAccessor.dll
+```
+6. Double-click the `setup-autostart.ahk` script (it will ask for elevated privilege) and automatically configure a scheduled task so that with every Windows start the `move-window-between-desktops.ahk` will be loaded. Furthermore it will offer to start `move-window-between-desktops.ahk`, after it is started an AHK icon will appear in the tray.
 
 **v1.0 (use this version only if you have no administrator rights)**:
 1. Download and install [AutoHotkey v2.0](https://www.autohotkey.com/download/ahk-v2.exe)
