@@ -38,7 +38,7 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
    ├── setup-autostart.ahk
    └── VirtualDesktopAccessor.dll
 ```
-6. Double-click the `setup-autostart.ahk` script (it will ask for elevated privilege) and automatically configure a scheduled task so that with every Windows start the `move-window-between-desktops.ahk` will be loaded. Furthermore it will offer to start `move-window-between-desktops.ahk`, after it is started an AHK icon will appear in the tray.
+5. Double-click the `setup-autostart.ahk` script (it will ask for elevated privilege) and automatically configure a scheduled task so that with every Windows start the `move-window-between-desktops.ahk` will be loaded. Furthermore it will offer to start `move-window-between-desktops.ahk`, after it is started an AHK icon will appear in the tray.
 
 **• v1.0 (use this version only if you have no administrator rights)**
 1. Download and install [AutoHotkey v2.0](https://www.autohotkey.com/download/ahk-v2.exe)
