@@ -43,12 +43,49 @@ Built with [AutoHotkey v2](https://www.autohotkey.com/) and [VirtualDesktopAcces
 
 ## Troubleshooting
 
-If the script stops working after a major Windows update:
+### Windows Defender SmartScreen blocks the script
 
-1. Check if AHK icon still appears in the tray (the `.ahk` file might be blocked by Windows Defender)
-2. Check for a newer **VirtualDesktopAccessor.dll** at the [releases page](https://github.com/Ciantic/VirtualDesktopAccessor/releases) — Windows updates can break the DLL
-3. Check this repository for an updated version
-4. [Open an issue](/FAI_Solutions/move-window-between-desktops/issues) and describe your problem (include your Windows build number)
+When you download `.ahk` files from the internet, Windows may flag them as
+untrusted. You will see a SmartScreen popup saying "Windows protected your PC."
+
+**Fix:** Right-click each downloaded `.ahk` file → select **Properties** →
+at the bottom of the General tab, check the **Unblock** checkbox → click
+**Apply**. Do this for both `move-window-between-desktops.ahk` and
+`setup-autostart.ahk` before running them.
+
+
+### The script stops working after a major Windows update
+
+1. Check if the AHK icon still appears in the system tray — the `.ahk` file
+   might have been blocked by Windows Defender after the update.
+2. A Windows update can break the DLL. Check for a newer
+   **VirtualDesktopAccessor.dll** at the
+   [releases page](https://github.com/Ciantic/VirtualDesktopAccessor/releases)
+   that matches your new Windows build number.
+3. Check this repository for an updated version of the script.
+4. [Open an issue](https://codeberg.org/FAI_Solutions/move-window-between-desktops/issues)
+   and describe your problem (include your Windows build number).
+
+
+### Nothing happens when I press the keyboard shortcut
+
+1. Make sure AutoHotkey **v2** is installed (not v1 — they are incompatible).
+2. Confirm all three files are in the **same folder** (see Installation).
+3. Verify that your `VirtualDesktopAccessor.dll` matches your Windows build
+   number. To find your build: *Settings → System → About* → look for
+   *"OS build"*.
+4. Try running `move-window-between-desktops.ahk` directly by double-clicking
+   it. If it shows an error, the message will tell you what is wrong.
+
+
+### The script cannot move certain windows (example: Task Manager)
+
+Some windows run with elevated (administrator) privileges. The script needs
+matching privileges to move them. Run `setup-autostart.ahk` and grant the
+administrator permission when prompted. See the
+[v1.2 release notes](https://codeberg.org/FAI_Solutions/move-window-between-desktops/releases/tag/v1.2)
+for details — if you decline admin rights, the script will still work for
+non-elevated windows.
 
 ---
 
@@ -71,3 +108,12 @@ Developers:
 - [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor) by Jari Pennanen (MIT License)
 
 
+
+## Keywords
+
+move window between desktops, move active window to next desktop, move window
+to another virtual desktop, Windows 10 virtual desktop move window shortcut,
+Windows 11 move window keyboard shortcut, virtual desktop window mover,
+AutoHotkey virtual desktop, AHK move window script, switch window between
+desktops hotkey, Ctrl Shift Win Arrow move window, VirtualDesktopAccessor,
+Windows virtual desktop utility, move window left right desktop
