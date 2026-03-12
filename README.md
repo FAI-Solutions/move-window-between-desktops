@@ -1,4 +1,4 @@
-# move-window-between-desktops
+# [move-window-between-desktops](https://fai-solutions.codeberg.page/move-window-between-desktops/)
 
 Windows 10 and 11 let you switch between virtual desktops using Ctrl+Win+Arrow, but they lack a built-in shortcut to move the currently active window to another desktop. This script fills that gap by allowing you to move your active window to the next or previous virtual desktop on Windows 10 / 11 with a single keyboard shortcut  - a feature Microsoft should have included long ago.
 
