@@ -106,14 +106,3 @@ Developers:
 ## Acknowledgements
 
 - [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor) by Jari Pennanen (MIT License)
-
-
-
-## Keywords
-
-move window between desktops, move active window to next desktop, move window
-to another virtual desktop, Windows 10 virtual desktop move window shortcut,
-Windows 11 move window keyboard shortcut, virtual desktop window mover,
-AutoHotkey virtual desktop, AHK move window script, switch window between
-desktops hotkey, Ctrl Shift Win Arrow move window, VirtualDesktopAccessor,
-Windows virtual desktop utility, move window left right desktop
