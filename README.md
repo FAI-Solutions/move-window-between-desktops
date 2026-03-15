@@ -89,6 +89,14 @@ non-elevated windows.
 
 ---
 
+## Code Signing
+
+[Code Signing Policy](CODE_SIGNING_POLICY.md) — Free code signing provided by
+[SignPath.io](https://about.signpath.io), certificate by
+[SignPath Foundation](https://signpath.org)
+
+
+
 ## License
 
 [MIT](LICENSE)
