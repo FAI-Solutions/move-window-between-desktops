@@ -107,7 +107,7 @@ non-elevated windows.
 
 Developers:
 
-- [Johannes Faber](https://codeberg.org/FAI_Solutions) &nbsp; — &nbsp; [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
+- [Johannes Faber](https://codeberg.org/FAI_Solutions) &nbsp; — &nbsp; 📧 [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
 
 
 
