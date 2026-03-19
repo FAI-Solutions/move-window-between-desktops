@@ -89,14 +89,6 @@ non-elevated windows.
 
 ---
 
-## Code Signing
-
-[Code Signing Policy](CODE_SIGNING_POLICY.md) — Free code signing provided by
-[SignPath.io](https://about.signpath.io), certificate by
-[SignPath Foundation](https://signpath.org)
-
-
-
 ## License
 
 [MIT](LICENSE)
@@ -113,8 +105,8 @@ Developers:
 
 ## Acknowledgements
 
-- **Security** [Code Signing Policy](CODE_SIGNING_POLICY.md) — Code signed by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org)
+- [Code Signing Policy](CODE_SIGNING_POLICY.md) — Code signed by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org)
 
-- [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor) by Jari Pennanen (MIT License
+- [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor) by Jari Pennanen (MIT License)
 
 
