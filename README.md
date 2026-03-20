@@ -59,7 +59,7 @@ If you want to modify the source code:
 
 ### Windows Defender SmartScreen Warning
 
-If you see a SartScreen warning (this is normal for new software):
+If you see a SmartScreen warning (this is normal for new software):
 1. Click **More info**
 2. Click **Run anyway**
 
@@ -76,7 +76,7 @@ at the bottom of the General tab, check the **Unblock** checkbox → click
 `setup-autostart.ahk` before running them
 
 
-### The application stops working after a Windows update
+### The application stops working after a major Windows update
 
 1. Check if the icon still appears in the system tray
 2. A Windows update may require a new DLL version — check [releases](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases) for updates
