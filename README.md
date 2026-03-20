@@ -51,7 +51,7 @@ If you want to modify the source code:
 2. Download `move-window-between-desktops_v1.3.ahk` and `setup-autostart_v1.3.ahk` from the [releases page v1.3](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/tag/v1.3)
 3. Download correct [VirtualDesktopAccessor.dll](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build (*Settings → System → About → look for "OS build"*)
 4. Place all files in the same folder and run the script
-5. Add a custom icon named `app_icon.ico` to the same folder — the script will automatically update the tray icon
+5. (Optional) add a custom icon named `app_icon.ico` to the same folder — the script will automatically update the tray icon
 
 
 
