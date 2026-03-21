@@ -41,12 +41,12 @@ Download the `move-window-between-desktops-setup.exe` from the [releases page](h
 Download `move-window-between-desktops.exe` and `setup-autostart.exe` (a helper utility that configures Task Scheduler) from the [releases page](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/latest):
 - No installation required
 - Run directly from any folder
-- Requires `VirtualDesktopAccessor.dll` in same folder — download the correct version from  [Ciantic's release page](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build (*Settings → System → About → look for "OS build"*)
+- Requires `VirtualDesktopAccessor.dll` in same folder — download the correct version from  [VirtualDesktopAccessor's release page](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build (*Settings → System → About → look for "OS build"*)
 
 
 ### Ⅲ) AutoHotkey Scripts
 
-#### Manual Install
+#### ⅰ) Manual Install
 
 1. Download and install [AutoHotkey v2](https://www.autohotkey.com/download/ahk-v2.exe) (if not already installed)
 2. Download (*right-click → "Save link as"*) the following files: [move-window-between-desktops.ahk](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/download/v1.3/move-window-between-desktops.ahk) , [setup-autostart.ahk](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/download/v1.3/setup-autostart.ahk)
@@ -61,13 +61,14 @@ Download `move-window-between-desktops.exe` and `setup-autostart.exe` (a helper 
 4. **Run setup-autostart.ahk as Administrator** — this sets up autostart and launches the script
 5. (Optional) add a custom icon named `app_icon.ico` to the same folder — the script will automatically update the tray icon
 
-#### Command line install via Scoop
+#### ⅱ) Command line install via Scoop
 
-Open pwsh.exe with admin rights, add the bucket and install by typing:
-```
+Open PowerShell as **Administrator** (`pwsh.exe`), add the bucket, then install by running:
+```powershell
 scoop bucket add fai-solutions https://codeberg.org/FAI-Solutions/scoop-bucket
 scoop install move-window-between-desktops
 ```
+Then double click ``setup-autostart.ahk`` as **Administrator** to enable autostart and the main script. 
 
 
 ## Troubleshooting
