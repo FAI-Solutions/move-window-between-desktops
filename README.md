@@ -1,6 +1,6 @@
 # [Move Window Between Desktops](https://fai-solutions.codeberg.page/move-window-between-desktops/)
 
-Windows 10 and 11 let you switch between virtual desktops using `Ctrl + Win + Arrow`, but they lack a built-in shortcut to move the currently active window to another desktop. This lightweight utility fills that gap by allowing you to move your active window to the next or previous virtual desktop with a single keyboard shortcut — a feature Microsoft should have included long ago.
+Windows 10 and 11 let you switch between virtual desktops using `Ctrl + Win + Arrow`, but they don’t offer a built-in shortcut for moving the currently active window between desktops. This lightweight utility fills that gap by letting you send the active window to the next or previous virtual desktop with a single keyboard shortcut. It makes managing multiple workspaces far more efficient and dramatically improves your workflow.
 
 ---
 
