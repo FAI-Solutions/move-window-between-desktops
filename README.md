@@ -46,7 +46,7 @@ Download `move-window-between-desktops.exe` and `setup-autostart.exe` (a helper 
 
 ### Ⅲ) AutoHotkey Scripts
 
-#### ⅰ) Manual Install
+#### 1. Manual Install
 
 1. Download and install [AutoHotkey v2](https://www.autohotkey.com/download/ahk-v2.exe) (if not already installed)
 2. Download (*right-click → "Save link as"*) the following files: [move-window-between-desktops.ahk](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/download/v1.3/move-window-between-desktops.ahk) , [setup-autostart.ahk](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/download/v1.3/setup-autostart.ahk)
@@ -58,17 +58,17 @@ Download `move-window-between-desktops.exe` and `setup-autostart.exe` (a helper 
 ├── setup-autostart.ahk               (autostart configuration)
 └── VirtualDesktopAccessor.dll        (Windows API bridge)
 ```
-4. **Run setup-autostart.ahk as Administrator** — this sets up autostart and launches the script
-5. (Optional) add a custom icon named `app_icon.ico` to the same folder — the script will automatically update the tray icon
+5. **Run setup-autostart.ahk as Administrator** — this sets up autostart and launches the script
+6. (Optional) add a custom icon named `app_icon.ico` to the same folder — the script will automatically update the tray icon
 
-#### ⅱ) Command line install via Scoop
+#### 2. Command line install via Scoop
 
 Open PowerShell as **Administrator** (`pwsh.exe`), add the bucket, then install by running:
 ```powershell
 scoop bucket add fai-solutions https://codeberg.org/FAI-Solutions/scoop-bucket
 scoop install move-window-between-desktops
 ```
-Then double click ``setup-autostart.ahk`` as **Administrator** to enable autostart and the main script. 
+Then double-click ``setup-autostart.ahk`` as **Administrator** to enable autostart and the main script. 
 
 
 ## Troubleshooting
