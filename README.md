@@ -46,13 +46,18 @@ Download `move-window-between-desktops.exe` and `setup-autostart.exe` (a helper 
 
 ### Ⅲ) AutoHotkey Scripts
 
-If you want to modify the source code:
-1. Install [AutoHotkey v2.0](https://www.autohotkey.com/)
-2. Download `move-window-between-desktops_v1.3.ahk` and `setup-autostart_v1.3.ahk` from the [releases page v1.3](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/tag/v1.3)
-3. Download correct [VirtualDesktopAccessor.dll](https://github.com/Ciantic/VirtualDesktopAccessor/releases) for your Windows build (*Settings → System → About → look for "OS build"*)
-4. Place all files in the same folder and run the script
+1. Download and install [AutoHotkey v2](https://www.autohotkey.com/download/ahk-v2.exe) (if not already installed)
+2. Download (*right-click → "Save link as"*) the following files: [move-window-between-desktops.ahk](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/download/v1.3/move-window-between-desktops.ahk) , [setup-autostart.ahk](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/download/v1.3/setup-autostart.ahk)
+3. Find and download the matching `VirtualDesktopAccessor.dll` for your Windows build (*Settings → System → About → check "OS build"*) from [VirtualDesktopAccessor's release page](https://github.com/Ciantic/VirtualDesktopAccessor/releases)
+4. Place all three files together, as shown below:
+```
+📁 MoveWindowBetweenDesktops/
+├── move-window-between-desktops.ahk  (main script)
+├── setup-autostart.ahk               (autostart configuration)
+└── VirtualDesktopAccessor.dll        (Windows API bridge)
+```
+4. **Run setup-autostart.ahk as Administrator** — this sets up autostart and launches the script
 5. (Optional) add a custom icon named `app_icon.ico` to the same folder — the script will automatically update the tray icon
-
 
 
 ## Troubleshooting
@@ -100,6 +105,7 @@ Run the application as Administrator. The installer can configure this automatic
 - **Developer**: Johannes Faber — [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
 - **Homepage**: https://fai-solutions.codeberg.page/move-window-between-desktops/
 - **Issues**: https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues
+- **Mirror**: https://github.com/FAI-Solutions/move-window-between-desktops
 
 
 
