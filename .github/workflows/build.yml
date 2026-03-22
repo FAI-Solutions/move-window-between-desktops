@@ -1,0 +1,41 @@
+name: Build Installer
+
+# Triggers when you push a version tag like v1.3, v1.4 etc.
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      # Step 1: Download all source files from the repo onto the build machine
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # Step 2: Download and install Inno Setup 6 silently on the build machine
+      - name: Install Inno Setup 6
+        run: |
+          $url = "https://files.jrsoftware.org/is/6/innosetup-6.4.3.exe"
+          Invoke-WebRequest -Uri $url -OutFile "$env:TEMP\innosetup.exe"
+          Start-Process -FilePath "$env:TEMP\innosetup.exe" `
+            -ArgumentList "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART" `
+            -Wait
+        shell: pwsh
+
+      # Step 3: Compile the .iss script into a .exe installer
+      - name: Build installer with Inno Setup
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "MoveWindowBetweenDesktops-setup-v1.3.iss"
+        shell: pwsh
+
+      # Step 4: Upload the compiled .exe as a build artifact
+      # This artifact will later be picked up by SignPath for signing
+      - name: Upload installer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: installer
+          path: Output\move-window-between-desktops-setup.exe
+          if-no-files-found: error
