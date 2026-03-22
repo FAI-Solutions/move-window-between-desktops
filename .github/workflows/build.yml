@@ -15,18 +15,13 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      # Step 2: Install Inno Setup 6.7.1 (latest stable as of 2026-02-17)
-      - name: Install Inno Setup 6
-        run: |
-          Invoke-WebRequest -Uri "https://jrsoftware.org/download.php/innosetup-6.7.1.exe" -OutFile "$env:TEMP\innosetup.exe"
-          Start-Process -FilePath "$env:TEMP\innosetup.exe" -ArgumentList "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART" -Wait
-        shell: pwsh
-
-      # Step 3: Compile the .iss script into a .exe installer
-      - name: Build installer with Inno Setup
-        run: |
-          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "MoveWindowBetweenDesktops-setup-v1.3.iss"
-        shell: pwsh
+      # Step 2 + 3: Install Inno Setup and compile the .iss script in one step
+      # Uses the official Inno Setup GitHub Action which handles installation automatically
+      - name: Compile installer with Inno Setup
+        uses: Minionguyjpro/Inno-Setup-Action@v1.2.2
+        with:
+          path: MoveWindowBetweenDesktops-setup-v1.3.iss
+          options: /O+
 
       # Step 4: Upload the compiled .exe as a build artifact
       # This artifact will later be picked up by SignPath for signing
