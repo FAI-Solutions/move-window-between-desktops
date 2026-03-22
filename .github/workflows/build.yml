@@ -18,7 +18,7 @@ jobs:
       # Step 2: Install Inno Setup 6.7.1 (latest stable as of 2026-02-17)
       - name: Install Inno Setup 6
         run: |
-          Invoke-WebRequest -Uri "https://files.jrsoftware.org/is/6/innosetup-6.7.1.exe" -OutFile "$env:TEMP\innosetup.exe"
+          Invoke-WebRequest -Uri "https://jrsoftware.org/download.php/innosetup-6.7.1.exe" -OutFile "$env:TEMP\innosetup.exe"
           Start-Process -FilePath "$env:TEMP\innosetup.exe" -ArgumentList "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART" -Wait
         shell: pwsh
 
