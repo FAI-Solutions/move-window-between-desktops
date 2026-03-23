@@ -8,6 +8,8 @@ Windows 10 and 11 let you switch between virtual desktops using `Ctrl + Win + Ar
 
 ## Keyboard Shortcuts
 
+Because laptop keyboards include an `Fn` key between ``Ctrl`` and ``Win`` keys while desktop keyboards do not, alternative hotkeys were added to maintain consistent finger distance across devices.
+
 ### Move Window Across Virtual Desktops
 
 | Shortcut | Action |
@@ -117,8 +119,8 @@ Run the application as Administrator. The installer can configure this automatic
 
 - **Developer**: Johannes Faber — [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
 - **Homepage**: https://fai-solutions.codeberg.page/move-window-between-desktops/
-- **Issues**: https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues
 - **Repository**: https://codeberg.org/FAI-Solutions/move-window-between-desktops
+- **Issues**: https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues
 - **Mirror**: https://github.com/FAI-Solutions/move-window-between-desktops
 
 
