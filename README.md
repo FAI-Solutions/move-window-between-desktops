@@ -8,9 +8,9 @@ Windows 10 and 11 let you switch between virtual desktops using `Ctrl + Win + Ar
 
 ## Keyboard Shortcuts
 
-Because laptop keyboards include an `Fn` key between ``Ctrl`` and ``Win`` keys while desktop keyboards do not, alternative hotkeys were added to maintain consistent finger distance across devices.
-
 ### Move Window Across Virtual Desktops
+
+Because laptop keyboards include an `Fn` key between ``Ctrl`` and ``Win`` keys while desktop keyboards do not, alternative hotkeys were added to maintain consistent finger distance across devices.
 
 | Shortcut | Action |
 |----------|--------|
@@ -35,10 +35,23 @@ Because laptop keyboards include an `Fn` key between ``Ctrl`` and ``Win`` keys w
 
 ### Ⅰ) Setup-Installer (Recommended)
 
+#### 1. Download Setup.exe
+
 Download the `move-window-between-desktops-setup.exe` from the [releases page](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/latest), double-click the setup installer and follow the on-screen instructions.
 - Automatically configures Task Scheduler to launch the utility at every user login
-- Supports automatic updates via winget — **coming soon**
+- Supports automatic updates via WinGet
 
+
+#### 2. Install via WinGet (CLI)
+
+Run PowerShell type the following commands:  
+```powershell
+winget install FAI-Solution.move-window-between-desktops
+```
+During installation, you’ll be prompted for elevated privileges. Accept to enable moving elevated apps (Task Manager). After installation, the folder opens—double-click `move-window-between-desktop.exe` to run. To upgrade, enter the following in PowerShell:  
+```powershell
+winget update FAI-Solution.move-window-between-desktops
+```
 
 ### Ⅱ) Portable EXE
 
