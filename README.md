@@ -35,7 +35,7 @@ Because laptop keyboards include an `Fn` key between ``Ctrl`` and ``Win`` keys w
 
 ### Ⅰ) Setup-Installer (Recommended)
 
-#### 1. Download Setup.exe
+#### 1. Download and install via Setup.exe
 
 Download the `move-window-between-desktops-setup.exe` from the [releases page](https://codeberg.org/FAI-Solutions/move-window-between-desktops/releases/latest), double-click the setup installer and follow the on-screen instructions.
 - Automatically configures Task Scheduler to launch the utility at every user login
