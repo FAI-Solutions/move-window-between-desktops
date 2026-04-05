@@ -122,12 +122,6 @@ Run the application as Administrator. The installer can configure this automatic
 
 ---
 
-## License
-
-[MIT](LICENSE)
-
-
-
 ## Contact
 
 - **Developer**: Johannes Faber — [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
@@ -135,6 +129,12 @@ Run the application as Administrator. The installer can configure this automatic
 - **Repository**: https://codeberg.org/FAI-Solutions/move-window-between-desktops
 - **Issues**: https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues
 - **Mirror**: https://github.com/FAI-Solutions/move-window-between-desktops
+
+
+
+## License
+
+[MIT](LICENSE)
 
 
 
