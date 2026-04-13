@@ -144,8 +144,6 @@ Run the application as Administrator. The installer can configure this automatic
 
 - [VirtualDesktopAccessor](https://github.com/Ciantic/VirtualDesktopAccessor) by Jari Pennanen — The DLL that provides access to Windows' virtual desktop API (MIT License).
 
-- [Code Signing Policy](CODE_SIGNING_POLICY.md) — Code signed by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org)
-
 ---
 
 **Enjoy a feature Microsoft should have included long ago!**
