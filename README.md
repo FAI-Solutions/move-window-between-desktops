@@ -46,11 +46,11 @@ Download the `move-window-between-desktops-setup.exe` from the [releases page](h
 
 Run PowerShell and type the following commands:  
 ```powershell
-winget install FAI-Solution.move-window-between-desktops
+winget install FAI-Solutions.move-window-between-desktops
 ```
 During installation, you’ll be prompted for elevated privileges. Accept to enable moving elevated apps (Task Manager). After installation, the folder opens—double-click `move-window-between-desktops.exe` to run. To upgrade, enter the following in PowerShell:  
 ```powershell
-winget update FAI-Solution.move-window-between-desktops
+winget update FAI-Solutions.move-window-between-desktops
 ```
 
 ### Ⅱ) Portable EXE
