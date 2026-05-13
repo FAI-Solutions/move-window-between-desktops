@@ -125,7 +125,8 @@ Run the application as Administrator. The installer can configure this automatic
 ## Contact
 
 - **Developer**: Johannes Faber — [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
-- **Homepage**: https://fai-solutions.codeberg.page/move-window-between-desktops/
+- **Hub-Website**: https://fai-solutions.github.io/
+- **App-Website**: https://fai-solutions.codeberg.page/move-window-between-desktops/
 - **Repository**: https://codeberg.org/FAI-Solutions/move-window-between-desktops
 - **Issues**: https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues
 - **Mirror**: https://github.com/FAI-Solutions/move-window-between-desktops
