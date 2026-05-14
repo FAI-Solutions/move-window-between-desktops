@@ -4,6 +4,9 @@ Windows 10 and 11 let you switch between virtual desktops using `Ctrl + Win + Ar
 
 > **Note:** This repository is primarily hosted on [Codeberg](https://codeberg.org/FAI-Solutions/move-window-between-desktops). Issues, pull requests, and contributions should be directed to the Codeberg repository.
 
+Below is a demo of how a Task Manager is moved across virtual desktops I to VI with `Ctrl + Shift + Win + Right Arrow`:
+![image](assets/demo.gif)
+
 ---
 
 ## Keyboard Shortcuts
