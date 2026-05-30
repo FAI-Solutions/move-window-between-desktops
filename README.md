@@ -128,11 +128,11 @@ Run the application as Administrator. The installer can configure this automatic
 ## Contact
 
 - **Developer**: Johannes Faber — [fais.udder466@passinbox.com](mailto:fais.udder466@passinbox.com)
-- **Hub-Website**: https://fai-solutions.github.io/
-- **App-Website**: https://fai-solutions.codeberg.page/move-window-between-desktops/
-- **Repository**: https://codeberg.org/FAI-Solutions/move-window-between-desktops
-- **Issues**: https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues
-- **Mirror**: https://github.com/FAI-Solutions/move-window-between-desktops
+- **Hub-Website**: <a href="https://fai-solutions.github.io/" rel="me noopener">https://fai-solutions.github.io/</a>
+- **App-Website**: <a href="https://fai-solutions.codeberg.page/move-window-between-desktops/" rel="me noopener">https://fai-solutions.codeberg.page/move-window-between-desktops/</a>
+- **Repository**: <a href="https://codeberg.org/FAI-Solutions/move-window-between-desktops" rel="me noopener">https://codeberg.org/FAI-Solutions/move-window-between-desktops</a>
+- **Issues**: <a href="https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues" rel="me noopener">https://codeberg.org/FAI-Solutions/move-window-between-desktops/issues</a>
+- **Mirror**: <a href="https://github.com/FAI-Solutions/move-window-between-desktops" rel="me noopener">https://github.com/FAI-Solutions/move-window-between-desktops</a>
 
 
 
