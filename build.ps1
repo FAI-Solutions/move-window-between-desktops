@@ -7,7 +7,7 @@ $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 Set-Location $PSScriptRoot
 
-# ---- pinned tools --------------------------------------------------------
+# --- pinned tools
 $Tools = @{
   AutoHotkey = @{ Url='https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.28/AutoHotkey_2.0.28.zip'; Sha256='b63be7548792b4ad0dfe424d91cc69376694ed2f758245b7a75a0c77d693b478' }
   Ahk2Exe    = @{ Url='https://github.com/AutoHotkey/Ahk2Exe/releases/download/Ahk2Exe1.1.37.02a2/Ahk2Exe1.1.37.02a2.zip'; Sha256='c29b8c3a5124850d79fc9e66e2ca79677c377d7f31631ad3022ba159c5d9e3be' }
@@ -50,7 +50,7 @@ Write-Host "AHK : $AHK"
 Write-Host "A2E : $A2E"
 Write-Host "ISCC: $ISCC"
 
-# ---- version (source of truth: ScriptVersion in the main script) --------
+# --- version (source of truth: ScriptVersion in the main script)
 $m = Select-String -Path src\move-window-between-desktops.ahk -Pattern 'ScriptVersion\s*:=\s*"([^"]+)"' | Select-Object -First 1
 if (-not $m) { throw 'ScriptVersion not found' }
 $Version = $m.Matches[0].Groups[1].Value                     # example 1.4 or 1.4-rc1
@@ -61,13 +61,13 @@ if ($s2.Matches[0].Groups[1].Value -ne $Version) { throw 'setup-autostart.ahk ve
 if ($env:GITHUB_REF_TYPE -eq 'tag' -and $env:GITHUB_REF_NAME -ne "v$Version") { throw "Tag $env:GITHUB_REF_NAME does not match v$Version" }
 Write-Host "Building $Version ($VersionNum)"
 
-# ---- 1. validate (catches name clashes like IsAlpha / Vda) ---------------
+# --- 1. validate (catches name clashes like IsAlpha / Vda)
 foreach ($f in 'src\move-window-between-desktops.ahk','src\setup-autostart.ahk') {
   $p = Start-Process $AHK -ArgumentList '/ErrorStdOut','/validate',"`"$f`"" -Wait -PassThru -NoNewWindow
   if ($p.ExitCode -ne 0) { throw "Validation failed: $f" }
 }
 
-# ---- 2. verify vendor DLLs -------------------------------------------------
+# --- 2. verify vendor DLLs
 Get-Content vendor\SHA256SUMS | Where-Object { $_ -match '^\s*([0-9a-fA-F]{64})\s+\*?(.+?)\s*$' } | ForEach-Object {
   $null = $_ -match '^\s*([0-9a-fA-F]{64})\s+\*?(.+?)\s*$'
   $h = (Get-FileHash "vendor\$($Matches[2])" -Algorithm SHA256).Hash
@@ -77,7 +77,7 @@ $listed = (Get-Content vendor\SHA256SUMS) -replace '^\s*[0-9a-fA-F]{64}\s+\*?', 
 Get-ChildItem vendor\*.dll | Where-Object { $listed -notcontains $_.Name } |
   ForEach-Object { throw "Not listed in vendor\SHA256SUMS: $($_.Name)" }
 
-# ---- 3. compile ------------------------------------------------------------
+# --- 3. compile
 Remove-Item build,dist -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory build\app\vda,dist -Force | Out-Null
 foreach ($n in 'move-window-between-desktops','setup-autostart') {
@@ -87,7 +87,7 @@ foreach ($n in 'move-window-between-desktops','setup-autostart') {
 Copy-Item vendor\*.dll build\app\vda\
 Copy-Item assets\app_icon.ico,LICENSE,THIRD-PARTY-NOTICES.txt build\app\
 
-# ---- 4. installer + portable zip ---------------------------------------------
+# --- 4. installer + portable zip
 & $ISCC "/DAppVersion=$Version" "/DAppVersionNum=$VersionNum" "/Odist" installer\setup.iss
 if ($LASTEXITCODE -ne 0) { throw 'ISCC failed' }
 Compress-Archive build\app\* "dist\move-window-between-desktops-$Version-portable.zip"
