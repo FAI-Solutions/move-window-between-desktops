@@ -1,33 +1,34 @@
-name: Build Installer
+name: build
 
-# Triggers when you push a version tag like v1.3, v1.4 etc.
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [ main, update-1.4 ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: windows-latest
-
+    runs-on: windows-2025
+    timeout-minutes: 12
     steps:
-      # Step 1: Download all source files from the repo onto the build machine
-      - name: Checkout source code
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v6
 
-      # Step 2 + 3: Install Inno Setup and compile the .iss script in one step
-      # Uses the official Inno Setup GitHub Action which handles installation automatically
-      - name: Compile installer with Inno Setup
-        uses: Minionguyjpro/Inno-Setup-Action@v1.2.2
-        with:
-          path: MoveWindowBetweenDesktops-setup-v1.3.iss
-          options: /O+
+      - name: Build (tools downloaded + hash-checked by build.ps1)
+        shell: pwsh
+        run: ./build.ps1 -DownloadTools
 
-      # Step 4: Upload the compiled .exe as a build artifact
-      # This artifact will later be picked up by SignPath for signing
-      - name: Upload installer artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload dist
+        uses: actions/upload-artifact@v6
         with:
-          name: installer
-          path: Output\move-window-between-desktops-setup.exe
+          name: move-window-between-desktops-${{ github.sha }}
+          path: dist/
           if-no-files-found: error
+          retention-days: 14

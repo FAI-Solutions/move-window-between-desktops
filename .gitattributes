@@ -1,0 +1,13 @@
+* text=auto
+*.ahk text eol=crlf
+*.iss text eol=crlf
+*.ps1 text eol=crlf
+*.txt text eol=crlf
+LICENSE text eol=crlf
+*.yml text eol=lf
+*.dll binary
+*.exe binary
+*.ico binary
+*.gif binary
+*.rtf binary
+*.zip binary

@@ -1,0 +1,6 @@
+.github/workflows/release.yml.bak
+.tools/
+build/
+dist/
+docs/
+build.ps1.bak

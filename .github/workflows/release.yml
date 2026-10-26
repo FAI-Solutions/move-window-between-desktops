@@ -1,0 +1,60 @@
+name: release
+
+on:
+  push:
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-2025
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Version from tag
+        id: ver
+        shell: pwsh
+        run: |
+          $tag = $env:GITHUB_REF_NAME
+          if ($tag -notmatch '^v\d+\.\d+(\.\d+)?(-[0-9A-Za-z.]+)?$') { throw "Unexpected tag format: $tag" }
+          $v = $tag.Substring(1)                                 # v1.4-rc1 -> 1.4-rc1
+          "version=$v" >> $env:GITHUB_OUTPUT
+          "prerelease=$(if ($v -match '-') { 'true' } else { 'false' })" >> $env:GITHUB_OUTPUT
+
+      - name: Build (build.ps1 checks tag == ScriptVersion)
+        shell: pwsh
+        run: ./build.ps1 -DownloadTools
+
+      - name: Release notes from CHANGELOG.md
+        shell: pwsh
+        run: |
+          $v    = '${{ steps.ver.outputs.version }}'
+          $pre  = '${{ steps.ver.outputs.prerelease }}' -eq 'true'
+          $base = $v -replace '-.*$', ''                         # 1.4-rc1 -> 1.4
+          $text = Get-Content CHANGELOG.md -Raw
+          # final release: exact section only. Pre-release: own section, then [1.4], then [Unreleased]
+          $names = if ($pre) { @($v, $base, 'Unreleased') } else { @($v) }
+          $notes = $null
+          foreach ($n in $names) {
+            $m = [regex]::Match($text, "(?ms)^## \[$([regex]::Escape($n))\][^\r\n]*\r?\n(.*?)(?=^## \[|\z)")
+            if ($m.Success -and $m.Groups[1].Value.Trim()) { $notes = $m.Groups[1].Value.Trim(); break }
+          }
+          if (-not $notes) { throw "CHANGELOG.md has no section '## [$v]'" }
+          $notes += "`n`n---`nChecksums: see SHA256SUMS.txt. Windows may show a SmartScreen warning (More info -> Run anyway)."
+          Set-Content release-notes.md $notes -Encoding utf8
+
+      - name: Create GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = $env:GITHUB_REF_NAME
+          $ghArgs = @('release', 'create', $tag, '--verify-tag', '--title', $tag, '--notes-file', 'release-notes.md')
+          if ('${{ steps.ver.outputs.prerelease }}' -eq 'true') { $ghArgs += '--prerelease' } else { $ghArgs += '--latest' }
+          $ghArgs += (Get-ChildItem dist -File).FullName
+          gh @ghArgs
+          if ($LASTEXITCODE) { throw "gh release create failed" }
